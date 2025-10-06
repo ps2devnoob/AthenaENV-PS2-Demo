@@ -15,25 +15,25 @@ Screen.setMode(canvas);
 Render.init();
 Render.setView(60.0, 1.0, 4000.0);
 
-os.chdir("render");
+os.chdir("models");
 
 const sky = new Image("sky.png");
 sky.width = canvas.width;
 sky.height = canvas.height;
 
 
-const skin_anims = new AnimCollection("ellie/ellie.gltf");
-const gltf_skin = new RenderData("ellie/ellie.gltf");
+const skin_anims = new AnimCollection("ellie.gltf");
+const gltf_skin = new RenderData("ellie.gltf");
 gltf_skin.accurate_clipping = true;
 gltf_skin.face_culling = Render.CULL_FACE_BACK;
 gltf_skin.pipeline = Render.PL_NO_LIGHTS;
 
-const cabelo_data = new RenderData("ellie/cabelo.gltf");
+const cabelo_data = new RenderData("cabelo.gltf");
 cabelo_data.accurate_clipping = true;
 cabelo_data.face_culling = Render.CULL_FACE_BACK;
 cabelo_data.pipeline = Render.PL_NO_LIGHTS;
 
-const plane_data = new RenderData("map/map.gltf");
+const plane_data = new RenderData("map.gltf");
 plane_data.accurate_clipping = true;
 plane_data.face_culling = Render.CULL_FACE_NONE;
 plane_data.pipeline = Render.PL_NO_LIGHTS;
